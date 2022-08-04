@@ -23,21 +23,22 @@ const Popular = () => {
 
   return (
     <>
-      <h1>Popular</h1>
-      {popular.results.map((movie) => {
-        return (
-          <div>
-            <Card
-              id={movie.id}
-              title={movie.title}
-              image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-              date={movie.release_date}
-              description={movie.overview}
-              movie={movie}
-            />
-          </div>
-        )
-      })}
+      <div className="d-flex justify-content-around align-items-start flex-wrap flex-row margintop">
+        {popular.results.map((movie) => {
+          return (
+            <div>
+              <Card
+                id={movie.id}
+                title={movie.title}
+                image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                date={movie.release_date}
+                description={movie.overview}
+                movie={movie}
+              />
+            </div>
+          )
+        })}
+      </div>
     </>
   )
 }

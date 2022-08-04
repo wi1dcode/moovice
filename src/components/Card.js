@@ -24,11 +24,18 @@ const Card = (props) => {
 
   return (
     <>
-      <h1>{props.title}</h1>
-      <img src={props.image} alt={props.title} />
-      <p>{props.date}</p>
-      <p>{props.description}</p>
-      <button onClick={() => handleClickAddToFavorites(props.id)}>Add to favorites</button>
+
+      <div class="card">
+        <img src={props.image} class="card-img-top" alt={props.title} />
+        <div class="card-body">
+          <h5 class="card-title">{props.title}</h5>
+          <p class="card-text">
+          {props.description}
+          </p>
+          <p>{props.date}</p>
+          <button type="button" className="btn btn-dark" onClick={() => handleClickAddToFavorites(props.id)}>Add to favorites</button>
+        </div>
+      </div>
     </>
   )
 }

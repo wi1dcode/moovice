@@ -35,19 +35,20 @@ const Favorites = () => {
 
   return (
     <>
-      <h1>Favorites page</h1>
-      {favoriteMovies.map((movie) => {
-        return (
-          <Card
-            key={movie.title}
-            movie={movie}
-            title={movie.title}
-            image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-            date={movie.release_date}
-            description={movie.overview}
-          />
-        )
-      })}
+      <div className="d-flex justify-content-around align-items-start flex-wrap flex-row margintop">
+        {favoriteMovies.map((movie) => {
+          return (
+            <Card
+              key={movie.title}
+              movie={movie}
+              title={movie.title}
+              image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+              date={movie.release_date}
+              description={movie.overview}
+            />
+          )
+        })}
+      </div>
     </>
   )
 }
