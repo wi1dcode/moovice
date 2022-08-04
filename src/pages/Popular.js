@@ -23,16 +23,18 @@ const Popular = () => {
 
   return (
     <>
+      <h1>Popular</h1>
       {popular.results.map((movie) => {
         return (
           <div>
             <Card
+              id={movie.id}
               title={movie.title}
               image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
               date={movie.release_date}
               description={movie.overview}
+              movie={movie}
             />
-            <h1>Popular page</h1>
           </div>
         )
       })}
