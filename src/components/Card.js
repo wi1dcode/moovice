@@ -25,11 +25,11 @@ const Card = (props) => {
   return (
     <>
 
-      <div class="card">
-        <img src={props.image} class="card-img-top" alt={props.title} />
-        <div class="card-body">
-          <h5 class="card-title">{props.title}</h5>
-          <p class="card-text">
+      <div className="card">
+        <img src={props.image} className="card-img-top" alt={props.title} />
+        <div className="card-body">
+          <h5 className="card-title">{props.title}</h5>
+          <p className="card-text">
           {props.description}
           </p>
           <p>{props.date}</p>
