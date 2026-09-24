@@ -1,0 +1,47 @@
+.page {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.page h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0 0 24px;
+}
+
+.page h1 span {
+  color: var(--accent-a);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.filter {
+  padding: 9px 18px;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.filter.active {
+  color: #06070d;
+  background: var(--accent-gradient);
+  border-color: transparent;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.empty {
+  color: var(--text-faint);
+  padding: 40px 0;
+}

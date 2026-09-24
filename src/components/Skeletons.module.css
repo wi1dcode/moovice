@@ -1,0 +1,105 @@
+.shimmer {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.row {
+  display: flex;
+  gap: 18px;
+  overflow: hidden;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 190px;
+}
+
+.poster {
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-md);
+  margin-bottom: 10px;
+}
+
+.line {
+  height: 14px;
+  border-radius: 7px;
+  margin-bottom: 8px;
+}
+
+.lineShort {
+  height: 12px;
+  width: 60%;
+  border-radius: 6px;
+}
+
+.hero {
+  width: 100%;
+  height: 62vh;
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+}
+
+.details {
+  width: 100%;
+}
+
+.backdrop {
+  width: 100%;
+  height: 46vh;
+  min-height: 320px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+}
+
+.detailsBody {
+  display: flex;
+  gap: 28px;
+}
+
+.detailsPoster {
+  width: 240px;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.detailsInfo {
+  flex: 1;
+  padding-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .card {
+    width: 148px;
+  }
+
+  .detailsBody {
+    flex-direction: column;
+  }
+
+  .detailsPoster {
+    width: 160px;
+  }
+}

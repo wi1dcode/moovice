@@ -1,0 +1,56 @@
+.page {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.head {
+  margin-bottom: 20px;
+}
+
+.head h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.divider {
+  width: 1px;
+  height: 22px;
+  background: var(--border);
+  margin: 0 4px;
+}
+
+.toggle {
+  padding: 9px 18px;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s var(--ease);
+}
+
+.toggle:hover {
+  color: var(--text);
+}
+
+.toggle.active {
+  color: #06070d;
+  background: var(--accent-gradient);
+  border-color: transparent;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
